@@ -1,0 +1,96 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 3
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+
+
+
+<!-- <ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 3</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-explore-container name="Tab 3 page"></app-explore-container> -->
+
+<!-- </ion-content> -->
+
+
+
+
+<!-- 
+<body>
+<p></p>
+<P></P>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <p>Nombre</p>
+      </ion-col>
+      <ion-col>
+        <p>Apellido</p>
+      </ion-col>
+      <ion-col>
+       <p>Escuderia</p> 
+      </ion-col>
+      <ion-col>
+       <p>Número</p> 
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  
+
+
+  <ion-list>
+    <ion-item *ngFor="let b of pilotos">
+      <ion-label><p>{{b.nombre}}</p></ion-label>
+      <ion-label><p>{{b.apellido}}</p></ion-label>
+      <ion-label><p>{{b.escuderia}}</p></ion-label>
+      <ion-label><p>{{b.numero}}</p></ion-label>
+    </ion-item>
+    
+  </ion-list>
+  </ion-content>
+</body>
+   -->
+
+
+
+
+   <ion-header>
+    <ion-toolbar>
+      <ion-title>Users List</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+  
+    <ion-list>
+      <ion-item *ngFor="let piloto of Pilotos">
+        <ion-label>
+          <h2>Nombre: {{piloto.nombre}}</h2>
+          <h3>Apellido: {{piloto.apellido}}</h3>
+          <h3>Escuderia: {{piloto.escuderia}}</h3>
+          <h3>Numero: {{piloto.numero}}</h3>
+        </ion-label>
+  
+        <div class="item-note" item-end>
+          <button ion-button clear [routerLink]="['/update/', piloto.id]">
+            <ion-icon name="create" style="zoom:1.5"></ion-icon>
+          </button>
+          <button ion-button clear (click)="removePiloto(piloto.id)">
+            <ion-icon name="trash" style="zoom:1.5"></ion-icon>
+          </button>
+        </div>
+      </ion-item>
+    </ion-list>
+  
+  </ion-content>
+

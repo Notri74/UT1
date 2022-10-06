@@ -1,0 +1,53 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>update</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content> -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Update Piloto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list lines="full">
+    <form [formGroup]="updatePilotoFg" (ngSubmit)="onSubmit()">
+      
+      <ion-item>
+        <ion-label position="floating"></ion-label>
+        <ion-input formControlName="nombre" type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">apellido</ion-label>
+        <ion-input formControlName="apellido" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">escuderia</ion-label>
+        <ion-input formControlName="escuderia" type="text" required>
+        </ion-input>
+      </ion-item>  
+
+      <ion-item>
+        <ion-label position="floating">numero</ion-label>
+        <ion-input formControlName="numero" type="text" required>
+        </ion-input>
+      </ion-item>  
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="success" expand="block">Update</ion-button>
+        </ion-col>
+      </ion-row>
+      
+    </form>
+  </ion-list>
+</ion-content>
